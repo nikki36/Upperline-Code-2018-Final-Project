@@ -1,0 +1,109 @@
+/*<!DOCTYPE html>*/
+/*<html>*/
+/*    <head>*/
+/*        <title>FPS Game</title>*/
+/*        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>*/
+/*        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js">*/
+/*        </script>*/
+/*        <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>*/
+/*    </head>*/
+/*    <body>*/
+/*        <a-scene physics = "gravity:-1">*/
+/*          <a-assets>*/
+/*              <a-asset-item id="bridge-obj" src="objects/bridge.obj"></a-asset-item>*/
+/*              <a-asset-item id="bridge-mtl" src="objects/bridge.mtl"></a-asset-item>*/
+/*               <img src="https://jolson615.github.io/solar-system-demo/stars.jpg" id="skyTexture">*/
+/*          </a-assets>*/
+          
+/*          <!--Sky-->*/
+/*          <a-sky src="#skyTexture"></a-sky>*/
+          
+/*          <!--Build Lower Plane-->*/
+/*          <a-plane static-body position="0 -60 0" rotation="-90 0 0" width="5000" height="5000" depth="10" color="white"></a-plane>*/
+/*          <a-ocean position="0 -50 0" rotation="-90 0 0" length="100" depth="100"></a-ocean>*/
+
+          
+/*          <!--Build Main Room-->*/
+/*                <!--Build our floor-->*/
+/*                <a-plane static-body position="0 0 0" rotation="-90 0 0" width="500" height="500" color="#7f848c"></a-plane>*/
+/*                <!--Build our ceiling-->*/
+/*                <a-box  position="0 100 0" rotation="0 90 0" width="504" height="10" depth="500" color="white"></a-box>*/
+/*                <!--Build our walls-->*/
+/*                <a-box  position="0 50 -250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"material= "transparent:true;opacity:false"></a-box>*/
+/*                <a-box  position="250 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c" material= "transparent:true;opacity:false"></a-box>*/
+/*                <a-box   position="-250 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c"material= "transparent:true;opacity:false"></a-box>*/
+/*                <a-box  position="0 50  250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c" material= "transparent:true;opacity:false"></a-box>*/
+/*                 <a-sphere id="theball" dynamic-body position="4 1.25 -5" radius="0.5" color="purple" mass="1"></a-sphere>*/
+/*                 <a-sphere id="theball" dynamic-body position="4 1.25 -5" radius="0.5" color="yellow" mass="1"></a-sphere>*/
+/*                 <a-sphere id="theball" dynamic-body position="4 1.25 -5" radius="0.5" color="green" mass="1"></a-sphere>*/
+                
+/*            <!--Build Primary Room-->*/
+/*                <!--Build our floor-->*/
+/*                <a-plane static-body position="750 0 0" rotation="-90 0 0" width="500" height="500" color="#7f848c"></a-plane>*/
+/*                  <a-box static-body position="400 0 0" rotation="-90 0 0" width="400" height="20" depth="2 material="transparent:true;opacity:"1"></a-box>*/
+                 
+/*                <!--Build our ceiling-->*/
+/*                <a-box static-body position="750 100 0" rotation="0 90 0" width="500" height="1" depth="500" color="white"></a-box>*/
+/*                <!--Build our walls-->*/
+/*                <a-box static-body position="750 50 -250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="1000 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="750 50 250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+                
+/*            <!--Build Secondary Room-->*/
+/*                <!--Build our floor-->*/
+/*                <a-plane static-body position="-750 0 0" rotation="-90 0 0" width="500" height="500" color="#7f848c"></a-plane>*/
+/*                <!--Build our ceiling-->*/
+/*                <a-box static-body position="-750 100 0" rotation="0 90 0" width="500" height="10" depth="500" color="white"></a-box>*/
+/*                <!--Build our walls-->*/
+/*                <a-box static-body position="-750 50 -250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="-1000 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="-500 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c" material= "transparent:true;opacity:false"></a-box>*/
+/*                <a-box static-body position="-750 50 250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="-360 0 0" rotation="-90 0 0" width="400" height="40" depth="4" color="blue"> </a-box>*/
+/*                <a-cylinder id="#tube" dynamic-body position="4 1.25 -5" radius="1" color="blue" mass="2"></a-cylinder></a-cylinder>*/
+            
+/*            <!--Build Tertiary Room-->*/
+/*                <!--Build our floor-->*/
+/*                <a-plane static-body position="0 0 -750" rotation="-90 0 0" width="500" height="500" color="#7f848c"></a-plane>*/
+/*                <!--Build our ceiling-->*/
+/*                <a-box static-body position="0 100 -750" rotation="0 90 0" width="500" height="10" depth="500" color="white"></a-box>*/
+/*                <!--Build our walls-->*/
+/*                <a-box static-body position="0 50 -1000" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="0 50 -500" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="250 50 -750" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c" material= "transparent:true;opacity:false"></a-box>*/
+/*                <a-box static-body position="-250 50 -750" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>*/
+/*                <a-box static-body position="0 0 -450" rotation="-89.4 -36.84 -52.65" width="400" height="40" depth="4" color="blue"></a-box>*/
+/*                <a-box static-body position="0 0 450" rotation="-89.4 -36.84 -52.65" width="400" height="40" depth="4" color="blue"></a-box>*/
+                
+            
+/*            <!--Build Quaternary Room-->*/
+/*                <!--Build our floor-->*/
+/*                <a-plane static-body position="0 0 750" rotation="-90 0 0" width="500" height="500" color="#7f848c"></a-plane>*/
+/*                <!--Build our ceiling-->*/
+/*                <a-box static-body position="0 100 750" rotation="0 90 0" width="500" height="10" depth="500" color="white"></a-box>*/
+/*                <!--Build our walls-->*/
+/*                <!--<a-box static-body position="-750 50 -250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>-->*/
+/*                <!--<a-box static-body position="-1000 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c"></a-box>-->*/
+/*                <!--<a-box static-body position="-500 50 0" rotation="0 90 0" width="504" height="100" depth="10" color="#7f848c" material= "transparent:true;opacity:false"></a-box>-->*/
+/*                <!--<a-box static-body position="-750 50 250" rotation="0 0 0" width="504" height="100" depth="10" color="#7f848c"></a-box>-->*/
+/*            <!--Build our Bridge-->*/
+/*                <!--<a-box position="" width="" height="" depth="" color=""></a-box>-->*/
+              
+            
+           
+/*            <a-entity class="player" id="player"*/
+/*               camera*/
+/*               jump-ability*/
+/*               universal-controls="movementAcceleration:350; fly:true"*/
+              
+/*               kinematic-body*/
+/*               position="25.5 3 -30"*/
+/*               rotation="0 180 0">*/
+/*               <a-cursor color="#42ebf4"></a-cursor>*/
+/*            </a-entity>*/
+            
+/*        </a-scene>*/
+/*        <script type="text/javascript" src="game.js"></script>*/
+/*    </body>*/
+    
+/*</html>*/
